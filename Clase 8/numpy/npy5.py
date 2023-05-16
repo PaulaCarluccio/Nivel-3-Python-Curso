@@ -1,0 +1,22 @@
+import numpy as np
+#unos =  np.ones((3,5))
+#unos =  np.ones((3,5),int)
+#print(unos)
+#print(unos[1][1])
+#ceros = np.zeros((2,3))
+#print(ceros)
+#ran = np.random.random((8,5))
+#print(ran)
+#print(int(ran[1][1] * 10))
+#ran2 = np.random.randint(50, size=(2, 4))
+#print(ran2)
+#numero = np.full((3,2),4)
+#print(numero)
+#texto = np.full((3,2),"Hola")
+#print(texto)
+#arange nos permite tener valores uniformente distribuídos
+#a = np.arange(0,100,5)
+#print(a)
+# Se especifica un rango, un máximo y la cantidad de valores entre ellos
+a = np.linspace(0,100,5)
+print(a)
