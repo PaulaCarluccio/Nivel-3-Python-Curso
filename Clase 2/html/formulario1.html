@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label,input,textarea{
+            display: block;
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/procesar" method="GET">
+        <label>Nombre</label>
+        <input type="text" name="nombre" required placeholder="Decime tu nombre">
+        <label>Email</label>
+        <input type="email" name="mail">        
+        <label>Fecha</label>
+        <input type="date" name="fecha" min="2020-03-19" max="2020-12-25" value="2020-06-20">
+        <label>País</label>
+        <select name="pais">
+            <option value="1">Argentina</option>
+            <option value="2">Brasil</option>
+            <option value="3">Chile</option>
+        </select>
+        <label>Comentario</label>
+        <textarea name="comentario"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{tituloanio}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div style="border-radius: 2px; border-style: solid; border-color: lightseagreen;"></div><h1>Años Bisiestos Siglo XX</h1></div>
+    <ul class="list-group">
+        {% for x in anios %}
+            {% if x % 4 == 0 and (x % 100 != 0 or x % 400 == 0) %}            
+            <li class="list-group-item">{{ x }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% include '/inc/footer.html' %}
+</body>
+</html>

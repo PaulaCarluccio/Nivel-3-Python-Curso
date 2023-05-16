@@ -1,0 +1,10 @@
+{% macro input(type='text',placeholder='',name='' ) -%}
+    <input type="{{ type }}" name="{{ name }}" placeholder="{{
+        placeholder|e }}"/>
+{%- endmacro %}
+
+{% macro grafico(porcentaje=100,color="red") -%}
+    <div style="width:400px;height:30px;border:1px solid silver;margin:10px;">
+    <div style="width:{{ porcentaje}}%; height:30px;background-color:{{color}}"></div>
+    <div>
+{%- endmacro %}

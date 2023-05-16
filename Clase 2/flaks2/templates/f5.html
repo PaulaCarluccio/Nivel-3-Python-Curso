@@ -1,0 +1,37 @@
+{% from "macros.html" import input,grafico with context %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar 5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <form action="/buscar5"  method="get">	
+        <input type="search" name="nombre" placeholder="Nombre" required minlength="4">
+        <br>
+        <select name="pais" onchange="this.form.submit()">
+            <option value="0">Elegir país</option>
+            <option>Argentina</option>
+            <option>Brasil</option>
+            <option>Holanda</option>
+            <option>Japón</option>
+        </select>        <br>
+
+        <input type="submit" value="Buscar">
+    </form>
+    <hr>
+    <p>Candidato 1 {{grafico(70,"blue")}}</p>
+    
+    <p>Candidato 2 {{grafico(30,"red")}}</p>
+    
+    
+    {{input("email","Escribe tu email","mail")}}
+    {% if nombre != '' and  nombre != None %}
+        <p>Te llamas <strong>{{nombre}}</strong> y quieres vivir en: <strong>{{pais}}</strong><p>
+    {% endif %}
+    
+    {{cardejemplo("Hola Mundo")|safe }}
+</body>
+</html>

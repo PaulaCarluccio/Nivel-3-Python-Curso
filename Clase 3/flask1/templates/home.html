@@ -1,0 +1,15 @@
+{% import "macros.html" as m with context %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mejor home del Mundo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    {{m.input("email","Escribe tu email","mail")}}
+    <p>Candidato Ganador {{m.grafico(70,"blue")}}</p>    
+    <p>Candidato no Ganador {{m.grafico(30,"red")}}</p>    
+</body>
+</html>
